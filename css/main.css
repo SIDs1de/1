@@ -1,0 +1,38 @@
+.red-text{
+	color: red;
+}
+
+.blue-box{
+	background: blue;
+	width: 100px;
+	margin-bottom: 100px;
+}
+
+.white-text{
+	color: #fff;
+}
+
+.green-box{
+	background: green;
+	padding: 5px;
+}
+
+.p50 {
+	padding: 50px;
+}
+
+.block p{
+	text-align: center;
+}
+
+.block{
+	display: inline-block;
+}
+
+.list{
+	font-size: 30px;
+}
+
+.list li{
+	border: 1px solid #000;
+}
