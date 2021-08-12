@@ -1,0 +1,270 @@
+@import url(normalize.css); // Сброс стилей
+
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	-webkit-overflow-scrolling: touch; // Плавная прокрутка сайта
+	color: #fff;
+}
+
+.container {
+	width: 1200px; // Задание ширины контейнеру
+	margin: 0 auto;
+}
+
+// Вёрстка верхней части --------------------------------------------------------------------------------
+header {
+	background-color: #161b25;
+}
+.wrapper-header {
+	// padding-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.avatar {
+	margin-right: 90px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+.p-name {
+	font-size: 90px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	margin-top: 80px;
+	line-height: 120px;
+}
+.profession {
+	font-size: 35px;
+	font-weight: 500;
+	background-color: #2e323b;
+	padding: 10px;
+	display: inline-block;
+}
+address {
+	padding-top: 30px;
+	font-size: 20px;
+	font-weight: 300;
+	font-style: normal;
+}
+.weight {
+	font-weight: 600;
+	padding-bottom: 20px;
+}
+.phone,
+.email,
+.address {
+	padding-bottom: 20px;
+	margin: 0;
+	display: inline-block;
+}
+.phone {
+	display: block;
+}
+.address {
+	float: right;
+}
+.block {
+	padding-top: 10px;
+	display: block;
+}
+// Конец вёрстки верхней части --------------------------------------------------------------------------------
+
+// Вёрстка секции опыт ------------------------------------------------------------------------------------
+.experience {
+	padding-top: 75px;
+	background: url('../img/bg.jpg') 0 0/cover no-repeat fixed;
+}
+h2 {
+	font-size: 40px;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	margin-bottom: 70px;
+}
+.wrapper-experience {
+	display: flex;
+	// margin: 0 -200px;
+}
+
+.text-block {
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 400;
+	margin-bottom: 90px;
+}
+.education {
+	width: 900px;
+}
+.item-block {
+	font-size: 20px;
+	font-weight: 400;
+}
+.main-text {
+	font-weight: 600;
+}
+.date {
+	font-style: italic;
+}
+.item-block{
+	margin-bottom: 70px;
+}
+// Конец вёрстки секции опыт -------------------------------------------------------------------------
+
+// Вёрстка секции умения
+.hs-wrapper {
+    display: flex;
+}
+.hobbies {
+
+	flex: 1 0 40%;
+}
+.hs {
+	background-color: #161b25;;
+}
+.hob-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	& li {
+		display: flex;
+		align-items: center;
+		padding-left: 45px;
+		margin-bottom: 30px;
+		font-size: 18px;
+		font-weight: 400;
+		position: relative;
+		padding-left: 45px;
+		&:before {
+			content: '';
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: green;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			position: absolute;
+		}
+	}
+}
+
+.h2-hob {
+	margin-bottom: 50px;
+}
+
+.skills-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	* {
+		flex: 1 1 40%;
+	}
+}
+
+.skills-list, li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		display: flex;
+		align-items: center;
+		padding-left: 45px;
+		margin-bottom: 30px;
+		font-size: 18px;
+		font-weight: 400;
+		position: relative;
+		&:before {
+			content: '';
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: green;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			position: absolute;
+		}
+	}
+}
+
+
+
+
+// Конец вёрстки секции умения -----------------------------------------------------------------------
+/* Responsive */
+/* 992px - 1200px */
+@media screen and (max-width: 1250px) {
+	.container {
+		width: 960px;
+	}
+	.p-name {
+		font-size: 50px;
+	}
+	.address {
+		float: none;
+	}
+	.profession {
+		font-size: 20px;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+	.container {
+		width: 720px;
+	}
+	.avatar img {
+		width: 350px;
+	}
+	.avatar {
+		background-color: transparent;
+		margin-right: 30px;
+	}
+	.wrapper-header {
+		flex-direction: column;
+	}
+	.address {
+		display: block;
+	}
+	.p-name {
+		margin-top: 0;
+	}
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+	.container {
+		width: 540px;
+	}
+	.wrapper-experience {
+		flex-direction: column;
+	}
+	h2 {
+		margin-bottom: 30px;
+	}
+	.text-block, .item-block {
+		margin-bottom: 40px;
+	}
+	.education {
+		width: auto;
+	}
+	.experience {
+		// margin-top: 25px;
+	}
+	.hs-wrapper {
+		flex-direction: column;
+	}
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+	.avatar img {
+		width: 285px;
+	}
+	.p-name {
+		line-height: 80px;
+	}
+	.phone, .email, .address {
+		padding-bottom: 40px;
+	}
+}
