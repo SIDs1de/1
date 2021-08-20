@@ -531,7 +531,6 @@ li.active {
         margin-right: 0;
     }
 }
-
 // Вёрстка swiper section
 .swiper-section {
     padding-bottom: 100px;
@@ -582,10 +581,72 @@ li.active {
     border-radius: 50%;
     color: #000;
     text-decoration: none;
+    transition: .3s;
+    &:hover {
+        background-color: #ff3532;
+    }
 }
 .want-btn-section {
     text-align: center;
     padding-top: 50px;
+}
+
+.swiper-item {
+    cursor: pointer;
+    position: relative;    
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 1000;
+        transition: .3s;
+    }
+    &:hover:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.644);
+        z-index: 1000;
+    }
+    &:before {
+        content: 'Перейти';
+        text-align: center;
+        line-height: 100px;
+        font-family: Montserrat;
+        font-weight: 800;
+        font-size: 0px;
+        height: 100px;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 1001;
+        transition: .1s;
+    }
+    &:hover:before {
+        content: 'Перейти';
+        text-align: center;
+        line-height: 100px;
+        font-family: Montserrat;
+        font-weight: 800;
+        font-size: 20px;
+        height: 100px;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.815);
+        z-index: 1001;
+    }
 }
 
 /* Responsive */
@@ -819,6 +880,9 @@ li.active {
     }
     .container {
         width: 90%;
+    }
+    .swiper-item {
+        border: 1px solid #000;
     }
     .section-1 {
         background: #000 url(../img/main-bg.jpg) center / cover no-repeat scroll;
