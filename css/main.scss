@@ -448,12 +448,12 @@ li.active {
     border: none;
     font-size: 0;
     position: absolute;
-    background: url(../img/arrow.png) 0 0 / 100% no-repeat;
+    background: url(../img/arrow.png) center / 100% no-repeat;
     left: 40%;
     top: 110%;
     z-index: 5;
     width: 30px;
-    height: 50px;
+    height: 45px;
     transform: scale(-1, 1) translateX(50%);
     cursor: pointer;
 }
@@ -461,13 +461,13 @@ li.active {
     border: none;
     font-size: 0;
     position: absolute;
-    background: url(../img/arrow.png) 0 0 / 100% no-repeat;
+    background: url(../img/arrow.png) center / 100% no-repeat;
     top: 110%;
     right: 40%;
     transform: translateX(50%);
     z-index: 5;
     width: 30px;
-    height: 50px;
+    height: 45px;
     cursor: pointer;
 }
 .not-footer-wrapper {
@@ -798,6 +798,9 @@ li.active {
     }
     .section-3 {
         background: #fff url(../img/second-bg.jpg) 0 0 / cover no-repeat scroll;
+    }
+    .section-4 {
+        padding-bottom: 0px;
     }
     .under-design {
         margin-bottom: 50px;
