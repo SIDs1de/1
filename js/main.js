@@ -108,7 +108,7 @@ if (ww < 993) {
 
 $('.design').slick({
   infinite: true,
-  swipe: false,
+  swipe: true,
   slidesToShow: 4,
   slidesToScroll: 2,
   autoplay: true,
@@ -124,7 +124,8 @@ $('.design').slick({
     {
       breakpoint: 993,
       settings: {
-        slidesToShow: 3
+        slidesToShow: 3,
+        swipe: false
       }
     },
     {

@@ -166,7 +166,7 @@ body {
             transition: 0.3s;
         }
         :hover {
-            color: #131316;
+            color: #000;
         }
     }
 }
@@ -175,6 +175,7 @@ li.active {
     border: 1px solid red;
     a {
         color: #000;
+        font-weight: 600;
     }
 }
 
@@ -811,6 +812,10 @@ li.active {
             }
             a {
                 color: #fff;
+                font-size: 20px;
+            }
+            &.active a {
+                font-weight: 600;
             }
         }
     }
