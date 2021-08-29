@@ -667,6 +667,94 @@ li.active {
     }
 }
 
+.under-main {
+	font-size: 20px;
+	color: #ccc;
+	text-align: center;
+	margin: 0 auto;
+	font-family: Raleway;
+	padding-top: 35px;
+	width: 60%;
+	line-height: 35px;			
+}
+.main-form {
+    padding-top: 90px;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    * {
+        border: none;
+        border-radius: none;
+        background-color: #f3f3f3;
+        padding: 15px 25px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-family: Raleway;
+        font-size: 15px;
+        line-height: 23px;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: #8e8e8e;
+        resize: none;
+    }
+}
+
+.name, .email {
+    flex: 1 1 40%;
+}
+.name {
+    margin-right: 30px;
+}
+.subject, .textarea, .submit {
+    flex: 1 1 100%;
+}
+.submit {
+    background-color: #fa5c58;
+    font-family: Montserrat;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    transition: .3s;
+    &:hover {
+        cursor: pointer;
+        background-color: #ff4946;
+    }
+}
+.connection-wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+.item {
+    flex: 1 1 33.333%;
+    padding-bottom: 100px;
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        padding: 25px;
+        border-radius: 50%;
+        background-color: #fa5c58;
+        transition: .3s;
+        &:hover {
+            background-color: #fc4441;
+        }
+    }  
+    p {
+        padding-top: 20px;
+        font-family: Montserrat;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: -0.025em;
+        color: #000000;
+    }
+}
+
 /* Responsive */
 /* 992px - 1200px */
 @media screen and (max-width: 1200px) {
@@ -696,6 +784,12 @@ li.active {
         & img {
             height: 100%;
         }
+    }
+    .name {
+        margin-right: 0;
+    }
+    .main-form {
+        flex-direction: column;
     }
     .burger {
         display: block;
@@ -863,6 +957,9 @@ li.active {
         margin-left: 0;
         margin-right: 50px;
     }
+    .connection-wrapper {
+        flex-direction: column;
+    }
     .design-h3 {
         text-align: left;
     }
@@ -886,6 +983,10 @@ li.active {
     .header {
         padding: 0;
     }
+    .under-main {
+		font-size: 15px;
+		width: 100%;
+	}
     .main {
         font-size: 32px;
     }
