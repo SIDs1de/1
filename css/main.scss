@@ -165,15 +165,34 @@ body {
             color: #8e8e8e;
             transition: 0.3s;
         }
-        :hover {
-            color: #000;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 95%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background-color: #000;
+            transition: .3s;
+        }
+        &:hover {
+            a {
+                color: #000;
+            }            
+            &:after {
+                width: 80%;
+            }
         }
     }
 }
 
 li.active {
-    border: 1px solid red;
+    position: relative;
     a {
+        font-size: 20px;
+        letter-spacing: 0.1em;
         color: #000;
         font-weight: 600;
     }
@@ -183,6 +202,9 @@ li.active {
 .section-1 {
     height: 100vh;
     background: #000 url(../img/main-bg.jpg) center / cover no-repeat fixed;
+}
+.pc {
+    background: #000 url('../img/pc.jpg') center / cover no-repeat fixed;
 }
 .upper-main {
     padding-top: 45vh;
@@ -213,7 +235,7 @@ li.active {
     position: relative;
     top: 0;
     right: 0;
-    transition: 0.2s;
+    transition: 0.3s;
     // transition: background-color 0.5s;
     font-family: Montserrat;
     font-size: 15px;
@@ -227,9 +249,9 @@ li.active {
     text-align: center;
     text-decoration: none;
     &:hover {
-        top: -1px;
+        // top: -1px;
         // right: -2px;
-        box-shadow: 0px 2px 1px black;
+        box-shadow: 5px 5px 5px rgba(255, 255, 255, .4);
     }
 }
 .burger {
@@ -489,17 +511,17 @@ li.active {
 }
 
 .footer {
-    background-color: #000;
+    background: url('../img/main-bg.jpg') top / cover no-repeat fixed;
     position: relative;
 }
 .main-text {
-    padding-top: 30px;
+    padding-top: 10px;
     text-align: center;
     font-family: Montserrat;
     font-size: 13px;
     line-height: 70px;
     color: #ffffff;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 .arrow-wrapper_f {
     left: 50%;
@@ -512,7 +534,7 @@ li.active {
     display: flex;
     width: 240px;
     justify-content: space-between;
-    padding-bottom: 90px;
+    padding-bottom: 75px;
 }
 .wrapper-btns-section-4 {
     display: inline-flex;
@@ -1006,6 +1028,12 @@ li.active {
     }
     .section-1 {
         background: #000 url(../img/main-bg.jpg) center / cover no-repeat scroll;
+    }
+    .footer {
+        background: url('../img/main-bg.jpg') top / cover no-repeat scroll;
+    }
+    .pc {
+        background: #000 url(../img/pc.jpg) center / cover no-repeat scroll;
     }
     .section-3 {
         background: #fff url(../img/second-bg.jpg) 0 0 / cover no-repeat scroll;

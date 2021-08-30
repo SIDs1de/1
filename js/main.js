@@ -52,7 +52,6 @@ window.addEventListener("scroll", function () {
 if (ww < 993) {
   document.querySelector(".second-block").dataset.wowDelay = "0";
 }
-
 arr.addEventListener("click", (e) => {
   document.querySelector(".section-2").scrollIntoView({
     behavior: "smooth",
