@@ -110,8 +110,6 @@ $('.design').slick({
   swipe: true,
   slidesToShow: 4,
   slidesToScroll: 2,
-  autoplay: true,
-  autoplaySpeed: 3000,
   touchThreshold: 30,
   responsive: [
     {
@@ -136,4 +134,23 @@ $('.design').slick({
     }
   ]
 });
-	
+
+$("a[href^='#']").click(function(){
+  burger.classList.remove("active");
+  menu.classList.remove("active");
+  body.classList.remove("active");
+  var _href = $(this).attr("href");
+  $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+  return false;
+});
+
+$('.first-project').on('click', function() {
+  window.location.href = "https://sids1de.github.io/portfolio/";
+  // window.location.replace("https://sids1de.github.io/portfolio/");
+})
+$('.second-project').on('click', function() {
+  window.location.href = "https://sids1de.github.io/axit/";
+})
+$('.third-project').on('click', function() {
+  window.location.href = "https://sids1de.github.io/first";
+})
