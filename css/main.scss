@@ -121,18 +121,19 @@ body {
 .aic {
     display: flex;
     align-items: center;
+    padding-top: 6px;
 }
 
 //Вёрстка HEADER
 .header {
     background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
     z-index: 2;
     &.up {
-        top: 0;
+        top: 0px;
         transition: 0.3s;
         .burger {
             transition: 0.3s;
@@ -153,7 +154,7 @@ body {
         margin-left: 20px;
         text-transform: uppercase;
         transition: 0.3s;
-        padding: 14px 20px;
+        padding: 16px 20px 12px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -540,6 +541,29 @@ li.active {
         cursor: pointer;
     }
 }
+
+.bar-wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 100000000000000000;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+
+.progress-bar {
+    height: 6px;
+    background: #4caf50;
+    width: 0%;
+  }
+
+  .progress-container {
+    width: 100%;
+    height: 6px;
+    background: #ccc;
+  }
+
+
+
 .not-footer-wrapper {
     display: flex;
     flex-direction: column;

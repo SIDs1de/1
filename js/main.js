@@ -154,3 +154,15 @@ $('.second-project').on('click', function() {
 $('.third-project').on('click', function() {
   window.location.href = "https://sids1de.github.io/first";
 })
+
+
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
