@@ -123,7 +123,9 @@ body {
     align-items: center;
     padding-top: 6px;
 }
-
+.header-menu li:hover {
+    cursor: pointer;
+}
 //Вёрстка HEADER
 .header {
     background-color: rgba(255, 255, 255, 0.9);
